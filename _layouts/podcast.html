@@ -1,0 +1,24 @@
+---
+layout: default
+id: Enter the ID of the podcast registered in podcasts.yaml
+permalink: # Must be the same as in podcasts.yaml (can not pull variables in yaml header)
+---
+
+{% assign podcast = site.data.podcasts[page.id] %}
+
+<h1>{{ podcast.title }}</h1>
+<h2 class="hosts">{{ podcast.hosts | join: " et " }}</h2>
+<p>{{ podcast.description }}</p>
+
+{% include podcast_visuals.html %}
+
+<ul>
+{% for episode in site.pages %}
+    {% if episode.permalink contains podcast.permalink and episode.layout == "episode" %}
+        <li>{{ episode.title }}</li>
+        <audio controls preload="none">
+            <source src="{{ episode.media }}" type="audio/mpeg">
+          </audio>
+    {% endif%}
+{% endfor %}
+</ul>

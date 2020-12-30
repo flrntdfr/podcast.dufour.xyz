@@ -1,0 +1,17 @@
+---
+# A multi-podcast website and feed host
+# Florent Dufour
+# 2020
+layout: home
+---
+
+{% for entry in site.data.podcasts %}
+{% assign podcast =  entry[1] %}
+
+<a href="{{ podcast.permalink }}"><h1>{{ podcast.title }}</h1></a>
+<h2 class="hosts">{{ podcast.hosts | join: " et " }}</h2>
+<p>{{ podcast.description }} <a href="{{ podcast.permalink }}" class="cta">...voir les épisodes</a></p>
+
+{% include podcast_visuals.html %}
+
+{% endfor %}

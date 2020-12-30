@@ -1,0 +1,36 @@
+ID-1:
+  title: La Boîte à Bougies
+  subtitle: Les discussions du soir sur le canapé continuent même quatre ans après.
+  title_short: La Boîte à Bougies
+  owner:
+    name: Florent Dufour
+    email: florent+podcast@dufour.xyz
+  hosts:
+    - Florent Dufour
+    - Héloïse Wary
+  description: Deux amis et anciens colocataires se retrouvent pour partager leurs nouvelles vies à l’étranger. Depuis quatre mois, Florent habite à Munich, spricht deutsch et fait des balades à moto dans les Alpes ; Héloïse habite à Reykjavík, talar íslensku et arpente la sinueuse nationale 1. Les discussions du soir sur le canapé continuent même quatre ans après.
+  permalink: /la-boite-a-bougies
+  artwork: /podcasts/la-boite-a-bougies/cover.png
+  episodes_directory: /podcasts/la-boite-a-bougies/episodes/
+  itunes_id: 123456
+  explicit: "false" # true or false
+  type: episodic # episodic or serial
+  keywords:
+    - Discussions
+    - Questions Existentielles
+    - Nocturne
+    - Boîte à Bougies
+    - Voyages
+    - Vivre à l’étranger
+  categories:
+    - Society & Culture
+# ID-2:
+#   title: Mots Parlés
+#   hosts:
+#     - Florent Dufour
+#   description: The description goes here
+#   permalink:
+#   artwork: /podcasts/mots-parles/cover.jpg
+#   episodes_directory: /podcasts/mots-parles
+#   itunes_id:
+#   explicit: yes

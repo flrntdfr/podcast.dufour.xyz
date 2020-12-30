@@ -1,0 +1,20 @@
+<head>
+    <meta charset={{site.encoding}}>
+    <meta http-equiv="Content-Type" content="text/html;charset={{site.encoding}}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{site.title}}</title>
+
+    <meta name="author" content="{{site.owner}}"></meta>
+    <meta name="description" content="{{site.description}}">
+    <meta name="language" content={{site.language}}>
+    <meta name="keywords" content="florent, dufour, blog, welcome, xyz, blockchain, biotechnology, health, research">
+    <meta name="copyright" content="Copyright 2020 {{site.owner}}. All rights reserved."></meta>
+    
+    <meta itemprop="name" content="{{ site.name }}">
+    <meta itemprop="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description }}{% endif %}">
+    <meta itemprop="image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.default_img | absolute_url }}{% endif %}">
+
+    <link href=/assets/css/style.css type="text/css" rel="stylesheet"></link>
+</head>

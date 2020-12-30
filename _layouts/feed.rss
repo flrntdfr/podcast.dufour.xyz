@@ -1,0 +1,58 @@
+---
+id:
+permalink: # Must be the same as in podcasts.yaml (can not pull variables in yaml header)
+---
+{%- assign podcast = site.data.podcasts[page.id] -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"
+	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" 
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:media="http://www.rssboard.org/media-rss" version="2.0">
+	<channel>
+		<atom:linkhref="{{- page.permalink | prepend: site.baseurl | prepend: site.url -}}" rel="self" type="application/rss+xml" />
+		<title>{{- podcast.title -}}</title>
+		<link>{{- podcast.permalink | prepend: site.baseurl | prepend: site.url -}}</link>
+		<lastBuildDate>{{- site.time | date_to_rfc822 -}}</lastBuildDate>
+		<language>{{- site.lang -}}</language>
+		<generator>multi-podcaster</generator>
+		<description>{{- podcast.description -}}</description>
+		<copyright>&#169; Copyright {{ site.owner }}</copyright>
+		<itunes:author>{{- podcast.hosts | join: " et "-}}</itunes:author>
+		<itunes:subtitle>{{- podcast.subtitle -}}</itunes:subtitle>
+		<itunes:summary>{{- podcast.description -}}</itunes:summary>
+		<itunes:copyright>&#169; Copyright {{ site.owner }}</itunes:copyright>
+		<itunes:explicit>{{- podcast.explicit -}}</itunes:explicit>
+		<itunes:keywords>{{- podcast.keywords | join: ", " -}}</itunes:keywords>
+		<itunes:owner>
+			<itunes:name>{{- podcast.owner.name -}}</itunes:name>
+			<itunes:email>{{- podcast.owner.email -}}</itunes:email>
+		</itunes:owner>
+		{% for category in podcast.categories -%}
+		<itunes:category text="{{- category | xml_escape -}}" />
+		{% endfor -%}
+		<itunes:image href="{{- podcast.artwork | prepend: site.baseurl | prepend: site.url -}}" />
+		<itunes:type>{{- podcast.type -}}</itunes:type>
+		{%- for episode in site.pages -%}
+		{%- if episode.permalink contains podcast.permalink and episode.layout == "episode" %}
+		<item>
+			<title>{{- episode.title | xml_escape -}}</title>
+			<itunes:episode>{{- episode.number -}}</itunes:episode>
+			<guid isPermaLink="false">{{- episode.guid -}}</guid>
+			<link>"{{- episode.permalink | prepend: site.baseurl | prepend: site.url -}}"</link>
+			<pubDate>{{- episode.date | date_to_rfc822 -}}</pubDate>
+			<description><![CDATA[ {{- episode.content | html_escape -}} ]]></description>
+			<itunes:title>{{- episode.title | xml_escape -}}</itunes:title>
+			<itunes:author>{{- podcast.hosts | join: " et " -}}</itunes:author>
+			<itunes:subtitle>{{- episode.excerpt -}}</itunes:subtitle>
+			<itunes:duration>{{- episode.duration -}}</itunes:duration>
+			<itunes:explicit>{{- episode.explicit -}}</itunes:explicit>
+			<itunes:image href="{{- podcast.artwork | prepend: site.baseurl | prepend: site.url -}}" />
+			<enclosure url="{{- episode.media -}}" length="{{- episode.length -}}" type="audio/mpeg" />
+		</item>
+		{%- endif %}
+		{%- endfor %}
+	</channel>
+</rss>
