@@ -19,7 +19,7 @@
         </div>
         <div class="subscribe_badge">
             <a href="{{ {{podcast.permalink }}/rss">{% include rss_badge.html %}</a>
-            <a class="appname" href="/rss">RSS</a>
+            <a class="appname" href="{{ podcast.permalink | prepend: site.baseurl | prepend: site.url }}/rss">RSS</a>
         </div>
     </div>
 </div>
