@@ -24,6 +24,31 @@ ID-1:
     - Vivre à l’étranger
   categories:
     - Society & Culture
+ID-2:
+  title: T'es jeune, T'en parles
+  subtitle: Nous en tous cas, on en parle.
+  title_short: T'es jeune, T'en parles
+  owner:
+    name: Florent Dufour
+    email: florent+podcast@dufour.xyz
+  hosts:
+    - Lucie
+    - Florent
+  description: « T’es jeune, t’en parles » est un podcast dans lequel Lucie et Florent te retrouvent chaque mois pour aborder un nouveau thème d’actualité/de société. Parce que la vision des jeunes d’aujourd’hui fera le monde de demain, ce podcast est notre manière de sensibiliser sur des sujets clés et d’apporter une pierre à l’édifice pour, peut-être, faire changer les choses.
+  permalink: /tjtp
+  artwork: /podcasts/tjtp/cover.png
+  episodes_directory: /podcasts/la-boite-a-bougies/episodes/
+  itunes_id: 123456
+  explicit: "false" # true or false
+  type: serial # episodic or serial
+  keywords:
+    - Discussions
+    - Questions Existentielles
+    - Nocturne
+    - Voyages
+    - Vivre à l’étranger
+  categories:
+    - Society & Culture
 # ID-2:
 #   title: Mots Parlés
 #   hosts:

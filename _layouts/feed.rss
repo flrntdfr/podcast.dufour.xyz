@@ -42,8 +42,8 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 			<itunes:episode>{{- episode.number -}}</itunes:episode>
 			<guid isPermaLink="false">{{- episode.guid -}}</guid>
 			<link>"{{- episode.permalink | prepend: site.baseurl | prepend: site.url -}}"</link>
-			<pubDate>{{- episode.date | date_to_rfc2822 -}}</pubDate>
-			<description><![CDATA[ {{- episode.content | html_escape -}} ]]></description>
+			<pubDate>{{- episode.date | date_to_rfc822 -}}</pubDate>
+			<description><![CDATA[{{- episode.content -}}]]></description>
 			<itunes:title>{{- episode.title | xml_escape -}}</itunes:title>
 			<itunes:author>{{- podcast.hosts | join: " et " -}}</itunes:author>
 			<itunes:subtitle>{{- episode.excerpt -}}</itunes:subtitle>
