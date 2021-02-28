@@ -8,7 +8,7 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-		<atom:linkhref="{{- page.permalink | prepend: site.baseurl | prepend: site.url -}}" rel="self" type="application/rss+xml" />
+		<atom:link href="{{- page.permalink | prepend: site.baseurl | prepend: site.url -}}" rel="self" type="application/rss+xml" />
 		<title>{{- podcast.title -}}</title>
 		<link>{{- podcast.permalink | prepend: site.baseurl | prepend: site.url -}}</link>
 		<lastBuildDate>{{- site.time | date_to_rfc822 -}}</lastBuildDate>
