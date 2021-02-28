@@ -17,4 +17,11 @@
     <meta itemprop="image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.default_img | absolute_url }}{% endif %}">
 
     <link href=/assets/css/style.css type="text/css" rel="stylesheet"></link>
+
+    {% if page.header_raw_inject %}
+        {% for item in page.header_raw_inject %}
+            {{ item }}
+        {% endfor %}
+    {% endif %}
+    
 </head>
