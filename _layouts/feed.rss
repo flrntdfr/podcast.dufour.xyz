@@ -4,13 +4,9 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 ---
 {%- assign podcast = site.data.podcasts[page.id] -%}
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+<rss xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"
-	xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" 
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:media="http://www.rssboard.org/media-rss" version="2.0">
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
 		<atom:linkhref="{{- page.permalink | prepend: site.baseurl | prepend: site.url -}}" rel="self" type="application/rss+xml" />
 		<title>{{- podcast.title -}}</title>
