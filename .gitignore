@@ -1,12 +1,11 @@
 # System
-
 .DS_Store
 *.swp
 
 # Jekyll
-
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+Gemfile.lock

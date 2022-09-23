@@ -1,5 +1,6 @@
 ---
+# Legacy RSS (mostly for Spotify)
 layout: feed
-id: "ID-1"
+id: "BAB"
 permalink: /la-boite-a-bougies/rss
 ---

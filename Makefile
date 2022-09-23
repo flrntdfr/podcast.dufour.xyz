@@ -1,12 +1,15 @@
-# Makefile - Jekyll
-# Florent Dufour 2020
+# Makefile
+# 2021
 
-JEKYLL = bundle exec jekyll
-URL = http://127.0.0.1:4000/
+JEKYLL=./jekyll.sh
 
-build: ## Build the website
-	$(JEKYLL) build
-serve: ## Serve the website locally and watch for changes
-	open $(URL); $(JEKYLL) serve --watch
-update-dependencies: ## Update website dependencies
-	bundle update
+build: ## Build the website locally
+	$(JEKYLL) $@
+serve: ## Build and serve the website locally
+	$(JEKYLL) $@ --trace
+clean: ## Clean caches
+	$(JEKYLL) $@
+nuke:  ## Nuke caches and temp files 
+	rm -rf ._* .jekyll* _site
+help:  ## Print this help
+	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

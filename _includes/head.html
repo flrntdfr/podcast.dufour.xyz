@@ -9,14 +9,18 @@
     <meta name="author" content="{{site.owner}}"></meta>
     <meta name="description" content="{{site.description}}">
     <meta name="language" content={{site.language}}>
-    <meta name="keywords" content="florent, dufour, blog, welcome, xyz, blockchain, biotechnology, health, research">
-    <meta name="copyright" content="Copyright 2020 {{site.owner}}. All rights reserved."></meta>
+    <meta name="keywords" content="florent, dufour, podcast, xyz, strasbourg, munich">
+    <meta name="copyright" content="Copyright {{ "now" | date: "%Y"}} {{site.owner}}. All rights reserved."></meta>
     
     <meta itemprop="name" content="{{ site.name }}">
     <meta itemprop="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description }}{% endif %}">
     <meta itemprop="image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.default_img | absolute_url }}{% endif %}">
 
-    <link href=/assets/css/style.css type="text/css" rel="stylesheet"></link>
+    <link href=/assets/css/style.css type="text/css" rel="stylesheet" />
+    {% for entry in site.data.podcasts %}
+    {% assign podcast =  entry[1] %}
+    <link type="application/atom+xml" rel="alternate" href="{{ podcast.permalink | prepend: site.baseurl | prepend: site.url }}/feed.xml" title="{{ podcast.title }}"/>
+    {% endfor %}
 
     {% if page.header_raw_inject %}
         {% for item in page.header_raw_inject %}

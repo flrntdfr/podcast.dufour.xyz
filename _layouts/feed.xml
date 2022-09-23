@@ -13,13 +13,12 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 		<link>{{- podcast.permalink | prepend: site.baseurl | prepend: site.url -}}</link>
 		<lastBuildDate>{{- site.time | date_to_rfc822 -}}</lastBuildDate>
 		<language>{{- site.lang -}}</language>
-		<generator>multi-podcaster</generator>
+		<generator>jekyll-multicast</generator>
 		<description>{{- podcast.description -}}</description>
 		<copyright>&#169; Copyright {{ site.owner }}</copyright>
 		<itunes:author>{{- podcast.hosts | join: " et "-}}</itunes:author>
 		<itunes:subtitle>{{- podcast.subtitle -}}</itunes:subtitle>
 		<itunes:summary>{{- podcast.description -}}</itunes:summary>
-		<itunes:copyright>&#169; Copyright {{ site.owner }}</itunes:copyright>
 		<itunes:explicit>{{- podcast.explicit -}}</itunes:explicit>
 		<itunes:keywords>{{- podcast.keywords | join: ", " -}}</itunes:keywords>
 		<itunes:owner>
@@ -35,6 +34,7 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 		{%- if episode.permalink contains podcast.permalink and episode.layout == "episode" %}
 		<item>
 			<title>{{- episode.title | xml_escape -}}</title>
+			<itunes:season>{{- episode.season -}}</itunes:season>
 			<itunes:episode>{{- episode.number -}}</itunes:episode>
 			<guid isPermaLink="false">{{- episode.guid -}}</guid>
 			<link>"{{- episode.permalink | prepend: site.baseurl | prepend: site.url -}}"</link>
@@ -42,7 +42,7 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 			<description><![CDATA[{{- episode.content -}}]]></description>
 			<itunes:title>{{- episode.title | xml_escape -}}</itunes:title>
 			<itunes:author>{{- podcast.hosts | join: " et " -}}</itunes:author>
-			<itunes:subtitle>{{- episode.excerpt -}}</itunes:subtitle>
+			<itunes:subtitle>{{- episode.excerpt | truncate: 255 -}}</itunes:subtitle>
 			<itunes:duration>{{- episode.duration -}}</itunes:duration>
 			<itunes:explicit>{{- episode.explicit -}}</itunes:explicit>
 			<itunes:image href="{{- podcast.artwork | prepend: site.baseurl | prepend: site.url -}}" />

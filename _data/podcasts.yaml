@@ -1,6 +1,6 @@
-ID-1:
+BAB:
   title: La Boîte à Bougies
-  subtitle: Les discussions du soir sur le canapé continuent même quatre ans après.
+  subtitle: Deux ans de coloc, des nuits à échanger, mais toujours autant de questionnements. Les discussions du soir sur le canapé continuent.
   title_short: La Boîte à Bougies
   owner:
     name: Florent Dufour
@@ -13,8 +13,8 @@ ID-1:
   artwork: /podcasts/la-boite-a-bougies/cover.png
   episodes_directory: /podcasts/la-boite-a-bougies/episodes/
   itunes_id: 1555940601
-  explicit: "false" # true or false
-  type: episodic # episodic or serial
+  explicit: "no" # yes or no
+  type: serial # episodic or serial
   keywords:
     - Discussions
     - Questions Existentielles

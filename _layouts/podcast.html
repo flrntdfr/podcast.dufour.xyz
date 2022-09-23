@@ -8,17 +8,23 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 
 <h1>{{ podcast.title }}</h1>
 <h2 class="hosts">{{ podcast.hosts | join: " et " }}</h2>
-<p>{{ podcast.description }}</p>
 
 {% include podcast_visuals.html %}
 
-<ul>
-{% for episode in site.pages %}
+<p>{{ podcast.description }}</p>
+
+{% for episode in site.pages reversed %}
     {% if episode.permalink contains podcast.permalink and episode.layout == "episode" %}
-        <li>{{ episode.title }}</li>
+        <h3><a href="{{ episode.permalink }}">
+            {% if episode.season %}
+                Saison {{ episode.season }} - 
+            {% endif %} 
+            Épisode {{ episode.number }}: {{ episode.title }}
+        </a></h3>
+        <i>{{ episode.date | date: "%d %b %y" }}</i>
+        <p>{{ episode.excerpt | truncate: 255 }}</p>
         <audio controls preload="none">
             <source src="{{ episode.media }}" type="audio/mpeg">
-          </audio>
+        </audio>
     {% endif%}
 {% endfor %}
-</ul>
