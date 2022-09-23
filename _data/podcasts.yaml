@@ -8,7 +8,7 @@ ID-1:
   hosts:
     - Florent Dufour
     - Héloïse Wary
-  description: Deux amis et anciens colocataires se retrouvent pour partager leurs nouvelles vies à l’étranger. Depuis l'été 2020, Florent habite à Munich, spricht deutsch et fait des balades à moto dans les Alpes ; Héloïse habite à Reykjavík, talar íslensku et arpente la sinueuse nationale 1. Les discussions du soir sur le canapé continuent même quatre ans après.
+  description: Deux ans de coloc, des nuits à échanger, mais toujours autant de questionnements. Les discussions du soir sur le canapé continuent. Deux expatriés en quête de réponses et de moments de vie. Florent à Munich, avec les vieux à poil dans les parcs, les lacs ensoleillés, la musique le soir, les musées d’art contemporain; Héloïse à Reykjavík, avec les bains chauds sous la pluie, les soirées JDR au coin du feu, les roulés à la cannelle et les volcans. Dans cette nouvelle saison, on vous raconte nos petites pépites, en compagnie d’invité.e.s plus pétillants les uns que les autres. Bonne humeur garantie... ou pas.
   permalink: /la-boite-a-bougies
   artwork: /podcasts/la-boite-a-bougies/cover.png
   episodes_directory: /podcasts/la-boite-a-bougies/episodes/
@@ -20,31 +20,6 @@ ID-1:
     - Questions Existentielles
     - Nocturne
     - Boîte à Bougies
-    - Voyages
-    - Vivre à l’étranger
-  categories:
-    - Society & Culture
-ID-2:
-  title: T'es jeune, T'en parles
-  subtitle: Nous en tous cas, on en parle.
-  title_short: T'es jeune, T'en parles
-  owner:
-    name: Florent Dufour
-    email: florent+podcast@dufour.xyz
-  hosts:
-    - Lucie
-    - Florent
-  description: « T’es jeune, t’en parles » est un podcast dans lequel Lucie et Florent te retrouvent chaque mois pour aborder un nouveau thème d’actualité/de société. Parce que la vision des jeunes d’aujourd’hui fera le monde de demain, ce podcast est notre manière de sensibiliser sur des sujets clés et d’apporter une pierre à l’édifice pour, peut-être, faire changer les choses.
-  permalink: /tjtp
-  artwork: /podcasts/tjtp/cover.png
-  episodes_directory: /podcasts/la-boite-a-bougies/episodes/
-  itunes_id: 123456
-  explicit: "false" # true or false
-  type: serial # episodic or serial
-  keywords:
-    - Discussions
-    - Questions Existentielles
-    - Nocturne
     - Voyages
     - Vivre à l’étranger
   categories:
