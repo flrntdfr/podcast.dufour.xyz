@@ -8,13 +8,14 @@ layout: home
 {% for entry in site.data.podcasts %}
 {% assign podcast =  entry[1] %}
 
-<a href="{{ podcast.permalink }}">
-    <center>
-    <h1>{{ podcast.title }}</h1>
-    <h2 class="hosts">{{ podcast.hosts | join: " et " }}</h2>
-    <p>{{ podcast.subtitle }}</p>
-    <img src="{{ podcast.artwork }}" alt="podcast artwork" width="50%">
-    </center>
-</a>
+<div class="carrousel">
+    <div class="release">
+        <a href="{{ podcast.permalink }}">
+        <img class="cover" src="{{ podcast.artwork }}" alt="podcast artwork"/>
+        </a>
+        <br>
+        <p id="legend"><b>{{ podcast.title }}</b></p>
+    </div>
+</div>
 
 {% endfor %}

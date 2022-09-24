@@ -24,13 +24,14 @@ BAB:
     - Vivre à l’étranger
   categories:
     - Society & Culture
-# ID-2:
-#   title: Mots Parlés
-#   hosts:
-#     - Florent Dufour
-#   description: The description goes here
-#   permalink:
-#   artwork: /podcasts/mots-parles/cover.jpg
-#   episodes_directory: /podcasts/mots-parles
-#   itunes_id:
-#   explicit: yes
+
+ID-2:
+  title: Mots Parlés
+  hosts:
+    - Florent Dufour
+  description: The description goes here
+  permalink:
+  artwork: /podcasts/mots-parles/cover.jpg
+  episodes_directory: /podcasts/mots-parles
+  itunes_id:
+  explicit: yes

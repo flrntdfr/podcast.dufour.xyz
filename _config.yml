@@ -1,4 +1,4 @@
-title: À écouter
+title: Podcasts
 email: florent+podcast@dufour.xyz
 description: >-
   Une collection à écouter.
@@ -10,7 +10,6 @@ owner: Florent Dufour
 
 plugins:
   - jekyll-liquify
-#  - jekyll-feed
 
 exclude:
   - README.md
@@ -21,8 +20,3 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/

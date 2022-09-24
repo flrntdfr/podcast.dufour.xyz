@@ -1,5 +1,8 @@
 <div class="visuals">
-    <a href="{{ podcast.permalink }}"><image src="{{ podcast.artwork }}" class="podcast_artwork"></image></a>
+    <div class="release">
+        <image class="cover" src="{{ podcast.artwork }}" class="podcast_artwork"></image>
+    </div>
+    <br>
     <div class="subscribe">
         <div class="subscribe_badge">
             <a href="https://podcasts.apple.com/us/podcast/id{{ podcast.itunes_id }}">{% include badges/apple_podcasts_badge.html %}</a>
