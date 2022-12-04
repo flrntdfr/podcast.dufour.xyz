@@ -1,29 +1,7 @@
 # Intro
 
-# Prerequisites
-
-- Have a domain
-- Have a hosting solution
-
-# Fork and hack
+Host multiple podcasts in one website with compliant RSS feeds and web players.
 
 # References
 
 - [Apple Podcaster’s Guide to RSS](https://help.apple.com/itc/podcasts_connect/#/itcb54353390)
-
-# TODO
-
-- RSS feed
-  - Corriger dates
-  - Vérifier compliance RSS (séparation par des "," etc)
-- Page podcast in 2 halves
-- Page par épisode
-- Vérifier que tous les site.xxx sont bons
-- Corriger les highlights pour les anchors / img
-- Add search capability
-- Header
-  - itunes_id creates a smart banner on Safari in iOS prompting visitors to subscribe
-  - RSS feed reference in header
-- Responsive on mobile
-- Héberger s3
-- CDATA à corriger
