@@ -13,6 +13,7 @@ BAB:
   artwork: /podcasts/la-boite-a-bougies/cover.png
   episodes_directory: /podcasts/la-boite-a-bougies/episodes/
   itunes_id: 1555940601
+  spotify_id: 2u2LhLiD520WWnNs9hEva2
   explicit: "no" # yes or no
   type: serial # episodic or serial
   keywords:

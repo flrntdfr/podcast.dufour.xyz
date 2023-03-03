@@ -12,6 +12,10 @@
             <a class="appname" href="https://overcast.fm/itunes{{podcast.itunes_id}}">Overcast</a>
         </div>
         <div class="subscribe_badge">
+            <a href="https://open.spotify.com/show/{{podcast.spotify_id}}">{% include badges/spotify_badge.html %}</a>
+            <a class="appname" href="https://open.spotify.com/show/{{podcast.spotify_id}}">Spotify</a>
+        </div>
+        <div class="subscribe_badge">
             <a href="{{podcast.permalink }}/feed.xml">{% include badges/rss_badge.html %}</a>
             <a class="appname" href="{{podcast.permalink }}/feed.xml">RSS</a>
         </div>
