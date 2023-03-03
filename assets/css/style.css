@@ -1,66 +1,100 @@
 body {
-    font-family: 'LM', monospace, 'Courier New', Courier, Times;
-    width: 40%;
-	margin: 0 auto;
-	max-width: 900px;
+	font-family: '-apple-system-font', 'Helvetica', 'Arial', sans-serif;
 }
 
 h1 {
-    text-align: center;
+	text-align: center;
 }
 
 h1 a,
 h2 a,
 h3 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .hosts {
-    text-align: center;
-    color: grey;
-    font-size: 1em;
+	text-align: center;
+	color: grey;
+	font-size: 1em;
 }
 
 audio {
-    display: block;
-    width: 80%;
-    margin: 1em auto;
+	display: block;
+	width: 80%;
+	margin: 1em auto;
+}
+
+.header {
+	padding-top: 1em;
+	padding-bottom: 2em;
+	display: flex;
+	justify-content: left;
+	padding-left: 1em;
 }
 
 .header a {
-    text-align: center;
-    padding-bottom: 1em;
-    text-decoration: none;
+	text-align: center;
+	text-decoration: none;
+}
+
+.tight {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
 }
 
 a:hover {
-    text-decoration: underline;
-}
-
-nav {
-	text-align: center;
-	margin: auto;
-	margin-top: 0px;
-	padding-top: 0px;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
+	text-decoration: underline;
 }
 
 a,
 a:visited {
-	color: inherit; 
+	color: inherit;
 }
 
 ul {
-    list-style-type: square;
-    text-align: left;
+	list-style-type: square;
+	text-align: left;
 }
 
+.carrousel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/*
+* A release to display within the carrousel
+* Contains the cover and the legen
+*/
+.release {}
+
+#legend {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.viuals {
+	display: flex;
+}
+
+.subscribe {
+	display: flex;
+	justify-content: center;
+}
+
+.artwork {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1em;
+}
 
 .cover {
 	/* Make img fit wrapping div */
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 300px;
+	max-height: 300px;
 	/* Drop shadow*/
 	box-shadow: 10px 10px 15px #ccc;
 	-moz-box-shadow: 10px 10px 15px #ccc;
@@ -69,84 +103,80 @@ ul {
 	transition: box-shadow 0.2s ease-in-out;
 }
 
-a .cover:hover{
+a .cover:hover {
 	transition: box-shadow 0.2s ease-in-out;
 	box-shadow: -5px -5px 15px #ccc;
 }
 
-.carrousel {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: rows;
-	justify-content: space-around;
-	margin: 1em;
-}
-
-/*
- * A release to display within the carrousel
- */
-.release {
-	width: 250px;
-	height: 250px;
-}
-
-#legend {
-	text-align: center;
-	margin-top: 1em;
-}
-
-.visuals {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	margin:1em;
-}
-
-.podcast_artwork {
-    width: 400px;
-}
-
 .subscribe_badge {
-    display: inline-block;
-    width: 4em;
-    text-align: center;
-    vertical-align: top;
-    padding-bottom: 0.5em;
-    cursor: pointer;
+	display: inline-block;
+	width: 4em;
+	text-align: center;
+	vertical-align: top;
+	padding-bottom: 0.5em;
+	cursor: pointer;
 }
 
 .subscribe_badge svg,
 .subscribe_badge .appname {
-    display: block;
-    margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 }
 
 .subscribe_badge svg {
-    width: 3em;
-    height: 3em;
-    padding-bottom: 0.25em;
+	width: 3em;
+	height: 3em;
+	padding-bottom: 0.25em;
 }
 
 .subscribe_badge a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .subscribe_badge .appname {
-    font-size: 0.75em;
+	font-size: 0.75em;
+}
+
+.podcast-page {
+	display: flex;
+	gap: 3em;
+	justify-content: left
+	flex-wrap: wrap;
+}
+
+.podcast-metadata {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	max-width: 400px
+}
+
+.podcast-episodes {
+	display: flex;
+	flex-direction: column;
+	flex: 3;
+	max-width: 1500px;
 }
 
 footer {
-    text-align: center;
-	margin: auto;
+	margin-top: 5em;
 	font-size: 0.8em;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+	text-align: center;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
+
 	/* Mobile phone */
 	body {
 		width: 95%;
 	}
+
+	.podcast-metadata {
+		width: 95%;
+	}
+
+	.podcast-episodes {
+		width: 95%;
+	}
+
 }

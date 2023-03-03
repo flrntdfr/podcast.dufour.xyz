@@ -16,8 +16,7 @@
     <meta itemprop="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description }}{% endif %}">
     <meta itemprop="image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.default_img | absolute_url }}{% endif %}">
 
-    <link href="{% link /assets/css/fonts.css %}"" type="text/css" rel="stylesheet" />
-    <link href="{% link /assets/css/style.css %}"" type="text/css" rel="stylesheet" />
+    <link href="{% link /assets/css/style.css %}" type="text/css" rel="stylesheet" />
     {% for entry in site.data.podcasts %}
     {% assign podcast =  entry[1] %}
     <link type="application/atom+xml" rel="alternate" href="{{ podcast.permalink | prepend: site.baseurl | prepend: site.url }}/feed.xml" title="{{ podcast.title }}"/>
@@ -28,5 +27,4 @@
             {{ item }}
         {% endfor %}
     {% endif %}
-    
 </head>

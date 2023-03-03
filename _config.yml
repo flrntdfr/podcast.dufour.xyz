@@ -2,14 +2,14 @@ title: Podcasts
 email: florent+podcast@dufour.xyz
 description: >-
   Une collection à écouter.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://podcast.dufour.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 lang: fr-FR
 owner: Florent Dufour
 
-plugins:
-  - jekyll-liquify
+collections:
+  nav:
+    output: true
 
 exclude:
   - README.md

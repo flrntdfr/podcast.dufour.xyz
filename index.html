@@ -1,21 +1,19 @@
 ---
-# A multi-podcast website and feed host
+# Website and feed for multiple podcasts
 # Florent Dufour
-# 2020
-layout: home
+# 2020 - 2023
+layout: default
 ---
 
+<div class="carrousel">
 {% for entry in site.data.podcasts %}
 {% assign podcast =  entry[1] %}
-
-<div class="carrousel">
-    <div class="release">
-        <a href="{{ podcast.permalink }}">
-        <img class="cover" src="{{ podcast.artwork }}" alt="podcast artwork"/>
-        </a>
-        <br>
-        <p id="legend"><b>{{ podcast.title }}</b></p>
-    </div>
+<div class="release">
+    <a href="{{ podcast.permalink }}">
+    <img class="cover" src="{{ podcast.artwork }}" alt="podcast artwork"/>
+    <br>
+    <p id="legend">{{ podcast.title }}</p>
+    </a>
 </div>
-
 {% endfor %}
+</div>
