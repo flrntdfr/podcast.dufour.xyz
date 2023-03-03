@@ -6,25 +6,32 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
 
 {% assign podcast = site.data.podcasts[page.id] %}
 
-<h1>{{ podcast.title }}</h1>
-<h2 class="hosts">{{ podcast.hosts | join: " et " }}</h2>
+<h1>{{ page.title }}</h1>
+<h2 class="hosts">{{ page.hosts | join: " et " }}</h2>
 
-{% include podcast_visuals.html %}
+<div class="podcast-page">
 
-<p>{{ podcast.description }}</p>
+    <div class="podcast-metadata">
+    {% include podcast_visuals.html %}
+    <p>{{ podcast.description }}</p>
+    </div>
 
-{% for episode in site.pages reversed %}
-    {% if episode.permalink contains podcast.permalink and episode.layout == "episode" %}
-        <h3><a href="{{ episode.permalink }}">
-            {% if episode.season %}
-                Saison {{ episode.season }} - 
-            {% endif %} 
-            Épisode {{ episode.number }}: {{ episode.title }}
-        </a></h3>
-        <i>{{ episode.date | date: "%d %b %y" }}</i>
-        <p>{{ episode.excerpt | truncate: 255 }}</p>
-        <audio controls preload="none">
-            <source src="{{ episode.media }}" type="audio/mpeg">
-        </audio>
-    {% endif%}
-{% endfor %}
+    <div class="podcast-episodes">
+    {% for episode in site.pages reversed %}
+        {% if episode.permalink contains page.permalink and episode.layout == "episode" %}
+            <h3><a href="{{ episode.permalink }}">
+                {% if episode.season %}
+                    Saison {{ episode.season }} - 
+                {% endif %} 
+                Épisode {{ episode.number }}: {{ episode.title }}
+            </a></h3>
+            <i>{{ episode.date | date: "%A %e %B %Y " }}</i>
+            <p>{{ episode.excerpt | truncate: 255 }}<a href="{{ episode.permalink }}">... lire plus</a></p>
+            <audio controls preload="none">
+                <source src="{{ episode.media }}" type="audio/mpeg">
+            </audio>
+        {% endif%}
+    {% endfor %}
+    </div>
+
+</div>
