@@ -158,6 +158,16 @@ a .cover:hover {
 	max-width: 1500px;
 }
 
+.bylines {
+	color: grey;
+	font-style: italic;
+}
+
+.bylines p {
+	margin-top: 0.1em;
+	margin-bottom: 0.1em
+}
+
 footer {
 	margin-top: 5em;
 	font-size: 0.8em;

@@ -19,7 +19,7 @@ permalink: # Must be the same as in podcasts.yaml (can not pull variables in yam
     <div class="podcast-episodes">
     {% for episode in site.pages reversed %}
         {% if episode.permalink contains page.permalink and episode.layout == "episode" %}
-            <h3><a href="{{ episode.permalink }}">
+            <h3>{{ episode.lang }}<a href="{{ episode.permalink }}">
                 {% if episode.season %}
                     Saison {{ episode.season }} - 
                 {% endif %} 
