@@ -25,15 +25,14 @@ audio {
 }
 
 .header {
-	padding-top: 1em;
-	padding-bottom: 2em;
+	padding: 1em;
 	display: flex;
 	justify-content: left;
-	padding-left: 1em;
+	font-size: 1.5em;
 }
 
-.header a {
-	text-align: center;
+.header a,
+.header a:hover{
 	text-decoration: none;
 }
 
